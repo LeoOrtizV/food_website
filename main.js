@@ -1,7 +1,7 @@
 $(document).ready(function ($) {
     "use strict";
 
-
+    // 1. Configuración de Swipers
     var book_table = new Swiper(".book-table-img-slider", {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -39,7 +39,6 @@ $(document).ready(function ($) {
             disableOnInteraction: false,
         },
         speed: 2000,
-
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -64,9 +63,11 @@ $(document).ready(function ($) {
         },
     });
 
+    // 2. Filtros de menú
     jQuery(".filters").on("click", function () {
         jQuery("#menu-dish").removeClass("bydefault_show");
     });
+    
     $(function () {
         var filterList = {
             init: function () {
@@ -88,6 +89,7 @@ $(document).ready(function ($) {
         filterList.init();
     });
 
+    // 3. Menú toggle
     jQuery(".menu-toggle").click(function () {
         jQuery(".main-navigation").toggleClass("toggled");
     });
@@ -96,33 +98,78 @@ $(document).ready(function ($) {
         jQuery(".main-navigation").removeClass("toggled");
     });
 
+    // 4. ScrollTrigger del header (versión mejorada)
     gsap.registerPlugin(ScrollTrigger);
-
-    var elementFirst = document.querySelector('.site-header');
+    
     ScrollTrigger.create({
         trigger: "body",
-        start: "30px top",
-        end: "bottom bottom",
-
-        onEnter: () => myFunction(),
-        onLeaveBack: () => myFunction(),
+        start: "top top",
+        end: "max",
+        onUpdate: (self) => {
+            const header = document.querySelector('.site-header');
+            if (self.scroll() > 30) {
+                header.classList.add('sticky_head');
+            } else {
+                header.classList.remove('sticky_head');
+            }
+        }
     });
 
-    function myFunction() {
-        elementFirst.classList.toggle('sticky_head');
+    // 5. Manejo de clics en anclas (para header y footer)
+    function handleAnchorClick(e) {
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            
+            const target = $(this.getAttribute('href'));
+            if (target.length) {
+                const headerHeight = $('.site-header').outerHeight();
+                const targetPosition = target.offset().top - headerHeight;
+                
+                ScrollTrigger.getAll().forEach(t => t.disable());
+                
+                $('html, body').stop().animate({
+                    scrollTop: targetPosition
+                }, 800, 'swing', function() {
+                    ScrollTrigger.getAll().forEach(t => t.enable());
+                    history.pushState(null, null, e.target.hash);
+                });
+            }
+        }
     }
 
+    // Aplicar a enlaces del menú principal y del footer
+    $('.menu a[href^="#"], .footer-menu a[href^="#"]').on('click', handleAnchorClick);
+
+    // 6. Parallax
     var scene = $(".js-parallax-scene").get(0);
     var parallaxInstance = new Parallax(scene);
-
-
 });
 
-
-jQuery(window).on('load', function () {
+// 7. Código window.onload
+jQuery(window).on('load', function() {
     $('body').removeClass('body-fixed');
-
-    //activating tab of filter
+    
+    // Inicializar mixItUp primero
+    var filterList = {
+        init: function() {
+            $("#menu-dish").mixItUp({
+                selectors: {
+                    target: ".dish-box-wp",
+                    filter: ".filter",
+                },
+                animation: {
+                    effects: "fade",
+                    easing: "ease-in-out",
+                },
+                load: {
+                    filter: ".all, .breakfast, .lunch, .dinner",
+                },
+            });
+        }
+    };
+    filterList.init();
+    
+    // Luego el código de los tabs
     let targets = document.querySelectorAll(".filter");
     let activeTab = 0;
     let old = 0;
@@ -134,7 +181,6 @@ jQuery(window).on('load', function () {
         targets[i].addEventListener("click", moveBar);
     }
 
-    // initial position on first === All 
     gsap.set(".filter-active", {
         x: targets[0].offsetLeft,
         width: targets[0].offsetWidth
@@ -165,8 +211,6 @@ jQuery(window).on('load', function () {
                 color: "#fff",
                 ease: "none"
             }, 0);
-
         }
-
     }
 });
