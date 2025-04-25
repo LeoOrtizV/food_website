@@ -2,28 +2,30 @@
 <html lang="en">
 
 <head>
+    <!-- METADATOS BÁSICOS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Website</title>
-    <!-- for icons  -->
+    <!-- ENLACES A HOJAS DE ESTILO Y LIBRERÍAS -->
+    <!-- Iconos de Unicons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!-- bootstrap  -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- for swiper slider  -->
+    <!-- Swiper (para sliders) -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!-- fancy box  -->
+    <!-- Fancybox (para galerías y lightboxes) -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-    <!-- custom css  -->
+    <!-- Hoja de estilos personalizada -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="body-fixed">
-    <!-- start of header  -->
+    <!-- ENCABEZADO DEL SITIO -->
     <header class="site-header">
         <div class="container">
             <div class="row">
+                <!-- LOGO -->
                 <div class="col-lg-2">
                     <div class="header-logo">
                         <a href="index.html">
@@ -31,9 +33,12 @@
                         </a>
                     </div>
                 </div>
+                <!-- MENÚ PRINCIPAL Y ELEMENTOS DEL HEADER -->
                 <div class="col-lg-10">
                     <div class="main-navigation">
+                        <!-- Botón de menú móvil -->
                         <button class="menu-toggle"><span></span><span></span></button>
+                        <!-- NAVEGACIÓN PRINCIPAL -->
                         <nav class="header-menu">
                             <ul class="menu food-nav-menu">
                                 <li><a href="#home">Home</a></li>
@@ -44,13 +49,16 @@
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>
+                         <!-- ELEMENTOS DEL LADO DERECHO DEL HEADER -->
                         <div class="header-right">
+                            <!-- Formulario de búsqueda -->
                             <form action="#" class="header-search-form for-des">
                                 <input type="search" class="form-input" placeholder="Search Here...">
                                 <button type="submit">
                                     <i class="uil uil-search"></i>
                                 </button>
                             </form>
+                            <!-- Iconos de carrito y usuario -->
                             <a href="javascript:void(0)" class="header-btn header-cart">
                                 <i class="uil uil-shopping-bag"></i>
                                 <span class="cart-number">3</span>
@@ -64,11 +72,13 @@
             </div>
         </div>
     </header>
-    <!-- header ends  -->
-
+    <!-- FIN DEL ENCABEZADO -->
+    <!-- CONTENIDO PRINCIPAL DEL SITIO -->
     <div id="viewport">
         <div id="js-scroll-content">
+            <!-- SECCIÓN DEL BANNER PRINCIPAL -->
             <section class="main-banner" id="home">
+                <!-- Efectos de paralaje para formas decorativas -->
                 <div class="js-parallax-scene">
                     <div class="banner-shape-1 w-100" data-depth="0.30">
                         <img src="assets/images/berry.png" alt="">
@@ -77,9 +87,11 @@
                         <img src="assets/images/leaf.png" alt="">
                     </div>
                 </div>
+                <!-- Contenido del banner -->
                 <div class="sec-wp">
                     <div class="container">
                         <div class="row">
+                            <!-- Texto del banner -->
                             <div class="col-lg-6">
                                 <div class="banner-text">
                                     <h1 class="h1-title">
@@ -95,6 +107,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Imagen del banner -->
                             <div class="col-lg-6">
                                 <div class="banner-img-wp">
                                     <div class="banner-img" style="background-image: url(assets/images/main-b.jpg);">
@@ -110,7 +123,7 @@
                 </div>
             </section>
 
-
+            <!-- SECCIÓN DE MARCAS (LOGOS DE EMPRESAS) -->
             <section class="brands-sec">
                 <div class="container">
                     <div class="row">
@@ -118,6 +131,7 @@
                             <div class="brand-title mb-5">
                                 <h5 class="h5-title">Trusted by 70+ companies</h5>
                             </div>
+                            <!-- Fila de logos de marcas -->
                             <div class="brands-row">
                                 <div class="brands-box">
                                     <img src="assets/images/brands/b1.png" alt="">
@@ -140,10 +154,12 @@
                 </div>
             </section>
 
+            <!-- SECCIÓN "SOBRE NOSOTROS" -->
             <section class="about-sec section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
+                            <!-- Título y descripción de la sección -->
                             <div class="sec-title text-center mb-5">
                                 <p class="sec-sub-title mb-3">About Us</p>
                                 <h2 class="h2-title">Discover our <span>restaurant story</span></h2>
@@ -158,6 +174,7 @@
                         </div>
                     </div>
                     <div class="row">
+                        <!-- Video "sobre nosotros" -->
                         <div class="col-lg-8 m-auto">
                             <div class="about-video">
                                 <div class="about-video-img" style="background-image: url(assets/images/about.jpg);">
@@ -165,7 +182,6 @@
                                 <div class="play-btn-wp">
                                     <a href="assets/images/video.mp4" data-fancybox="video" class="play-btn">
                                         <i class="uil uil-play"></i>
-
                                     </a>
                                     <span>Watch The Recipe</span>
                                 </div>
@@ -174,11 +190,12 @@
                     </div>
                 </div>
             </section>
-
+            <!-- SECCIÓN DEL MENÚ -->
             <section style="background-image: url(assets/images/menu-bg.png);"
                 class="our-menu section bg-light repeat-img" id="menu">
                 <div class="sec-wp">
                     <div class="container">
+                        <!-- Título de la sección -->
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="sec-title text-center mb-5">
@@ -190,6 +207,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Pestañas/filtros del menú -->
                         <div class="menu-tab-wp">
                             <div class="row">
                                 <div class="col-lg-12 m-auto">
@@ -217,8 +235,10 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Lista de platillos del menú -->
                         <div class="menu-list-row">
                             <div class="row g-xxl-5 bydefault_show" id="menu-dish">
+                                <!-- Cada platillo es una "caja" con imagen, información y precio -->
                                 <div class="col-lg-4 col-sm-6 dish-box-wp breakfast" data-cat="breakfast">
                                     <div class="dish-box text-center">
                                         <div class="dist-img">
@@ -466,15 +486,17 @@
                     </div>
                 </div>
             </section>
-
+            <!-- SECCIONES DE DESTACADOS (PIZZA Y SUSHI) -->
             <section class="two-col-sec section">
                 <div class="container">
                     <div class="row align-items-center">
+                        <!-- Imagen del producto -->
                         <div class="col-lg-5">
                             <div class="sec-img mt-5">
                                 <img src="assets/images/pizza.png" alt="">
                             </div>
                         </div>
+                         <!-- Descripción del producto -->
                         <div class="col-lg-7">
                             <div class="sec-text">
                                 <h2 class="xxl-title">Veggie Pizza</h2>
@@ -520,6 +542,7 @@
                 </div>
             </section>
 
+            <!-- SECCIÓN PARA RESERVAR MESA -->
             <section class="book-table section bg-light">
                 <div class="book-table-shape">
                     <img src="assets/images/table-leaves-shape.png" alt="">
@@ -528,9 +551,10 @@
                 <div class="book-table-shape book-table-shape2">
                     <img src="assets/images/table-leaves-shape.png" alt="">
                 </div>
-
+                <!-- Contenido principal -->
                 <div class="sec-wp">
                     <div class="container">
+                        <!-- Título -->
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="sec-title text-center mb-5">
@@ -542,7 +566,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Horarios y teléfono -->
                         <div class="book-table-info">
                             <div class="row align-items-center">
                                 <div class="col-lg-4">
@@ -565,11 +589,12 @@
                                 </div>
                             </div>
                         </div>
-
+                         <!-- Galería de imágenes del restaurante -->
                         <div class="row" id="gallery">
                             <div class="col-lg-10 m-auto">
                                 <div class="book-table-img-slider" id="icon">
                                     <div class="swiper-wrapper">
+                                        <!-- Imágenes con lightbox (Fancybox) -->
                                         <a href="assets/images/bt1.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
                                             style="background-image: url(assets/images/bt1.jpg)"></a>
@@ -595,7 +620,7 @@
                                             class="book-table-img back-img swiper-slide"
                                             style="background-image: url(assets/images/bt4.jpg)"></a>
                                     </div>
-
+                                     <!-- Controles del slider -->
                                     <div class="swiper-button-wp">
                                         <div class="swiper-button-prev swiper-button">
                                             <i class="uil uil-angle-left"></i>
@@ -608,16 +633,15 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
             </section>
 
+            <!-- SECCIÓN DE NUESTRO EQUIPO (CHEFS) -->
             <section class="our-team section">
                 <div class="sec-wp">
                     <div class="container">
+                        <!-- Título -->
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="sec-title text-center mb-5">
@@ -629,8 +653,10 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Slider de chefs -->
                         <div class="row team-slider">
                             <div class="swiper-wrapper">
+                                <!-- Cada chef es un slide -->
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
                                         <div style="background-image: url(assets/images/chef/c1.jpg);"
@@ -638,6 +664,7 @@
 
                                         </div>
                                         <h3 class="h3-title">Nilay Hirpara</h3>
+                                        <!-- Redes sociales -->
                                         <div class="social-icon">
                                             <ul>
                                                 <li>
@@ -762,6 +789,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Controles del slider -->
                             <div class="swiper-button-wp">
                                 <div class="swiper-button-prev swiper-button">
                                     <i class="uil uil-angle-left"></i>
@@ -776,9 +804,11 @@
                 </div>
             </section>
 
+            <!-- SECCIÓN DE TESTIMONIOS -->
             <section class="testimonials section bg-light">
                 <div class="sec-wp">
                     <div class="container">
+                        <!-- Título -->
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="sec-title text-center mb-5">
@@ -791,19 +821,23 @@
                             </div>
                         </div>
                         <div class="row">
+                            <!-- Imagen decorativa -->
                             <div class="col-lg-5">
                                 <div class="testimonials-img">
                                     <img src="assets/images/testimonial-img.png" alt="">
                                 </div>
                             </div>
+                            <!-- Cajas de testimonios -->
                             <div class="col-lg-7">
                                 <div class="row">
+                                    <!-- Cada testimonio es una caja -->
                                     <div class="col-sm-6">
                                         <div class="testimonials-box">
                                             <div class="testimonial-box-top">
                                                 <div class="testimonials-box-img back-img"
                                                     style="background-image: url(assets/images/testimonials/t1.jpg);">
                                                 </div>
+                                                <!-- Calificación con estrellas -->
                                                 <div class="star-rating-wp">
                                                     <div class="star-rating">
                                                         <span class="star-rating__fill" style="width:85%"></span>
@@ -892,10 +926,11 @@
                     </div>
                 </div>
             </section>
-
+            <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
             <section class="faq-sec section-repeat-img" style="background-image: url(assets/images/faq-bg.png);">
                 <div class="sec-wp">
                     <div class="container">
+                        <!-- Título -->
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="sec-title text-center mb-5">
@@ -907,7 +942,7 @@
                                 </div>
                             </div>
                         </div>
-
+                         <!-- Preguntas y respuestas -->
                         <div class="faq-row">
                             <div class="faq-box">
                                 <h4 class="h4-title">What are the login hours?</h4>
@@ -939,12 +974,13 @@
                 </div>
             </section>
 
-
+            <!-- SECCIÓN DEL BLOG -->
             <div class="bg-pattern bg-light repeat-img"
                 style="background-image: url(assets/images/blog-pattern-bg.png);">
                 <section class="blog-sec section" id="blog">
                     <div class="sec-wp">
                         <div class="container">
+                            <!-- Título -->
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="sec-title text-center mb-5">
@@ -956,7 +992,9 @@
                                     </div>
                                 </div>
                             </div>
+                             <!-- Entradas del blog -->
                             <div class="row">
+                                <!-- Cada entrada es una columna -->
                                 <div class="col-lg-4">
                                     <div class="blog-box">
                                         <div class="blog-img back-img"
@@ -1002,21 +1040,24 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- SECCIÓN DE NEWSLETTER -->
                 <section class="newsletter-sec section pt-0">
                     <div class="sec-wp">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8 m-auto">
+                                    <!-- Caja del newsletter con fondo -->
                                     <div class="newsletter-box text-center back-img white-text"
                                         style="background-image: url(assets/images/news.jpg);">
                                         <div class="bg-overlay dark-overlay"></div>
                                         <div class="sec-wp">
+                                            <!-- Texto -->
                                             <div class="newsletter-box-text">
                                                 <h2 class="h2-title">Subscribe our newsletter</h2>
                                                 <p>Stay updated with our latest dishes, special offers, 
                                                     and global flavors—straight to your inbox.</p>
                                             </div>
+                                            <!-- Formulario -->
                                             <form action="#" class="newsletter-form">
                                                 <input type="email" class="form-input"
                                                     placeholder="Enter your Email Here" required>
@@ -1031,12 +1072,14 @@
                 </section>
             </div>
 
-            <!-- footer starts  -->
+            <!-- PIE DE PÁGINA -->
             <footer class="site-footer" id="contact">
+                <!-- Parte superior del footer -->
                 <div class="top-footer section">
                     <div class="sec-wp">
                         <div class="container">
                             <div class="row">
+                                <!-- Información del restaurante -->
                                 <div class="col-lg-4">
                                     <div class="footer-info">
                                         <div class="footer-logo">
@@ -1046,6 +1089,7 @@
                                         </div>
                                         <p>Thank you for visiting Global Bites — where every bite is a journey around the world.
                                         </p>
+                                        <!-- Redes sociales -->
                                         <div class="social-icon">
                                             <ul>
                                                 <li>
@@ -1072,6 +1116,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Horarios, menú y políticas -->
                                 <div class="col-lg-8">
                                     <div class="footer-flex-box">
                                         <div class="footer-table-info">
@@ -1081,6 +1126,7 @@
                                                 <li><i class="uil uil-clock"></i> Fri-Sun : 11am - 22pm</li>
                                             </ul>
                                         </div>
+                                        <!-- Enlaces del menú -->
                                         <div class="footer-menu food-nav-menu">
                                             <h3 class="h3-title">Links</h3>
                                             <ul class="column-2">
@@ -1094,6 +1140,7 @@
                                                 <li><a href="#contact">Contact</a></li>
                                             </ul>
                                         </div>
+                                          <!-- Políticas -->
                                         <div class="footer-menu">
                                             <h3 class="h3-title">Company</h3>
                                             <ul>
@@ -1108,6 +1155,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Parte inferior del footer (copyright) -->
                 <div class="bottom-footer">
                     <div class="container">
                         <div class="row">
@@ -1118,56 +1166,50 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Botón para volver arriba -->
                         <button class="scrolltop"><i class="uil uil-angle-up"></i></button>
                     </div>
                 </div>
             </footer>
-
-
-
         </div>
     </div>
 
-
-
-
-
-    <!-- jquery  -->
+    <!-- SCRIPTS JS -->
+    <!-- jQuery -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <!-- bootstrap -->
+    <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
 
-    <!-- fontawesome  -->
+    <!-- FontAwesome -->
     <script src="assets/js/font-awesome.min.js"></script>
 
-    <!-- swiper slider  -->
+    <!-- Swiper slider  -->
     <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!-- mixitup -- filter  -->
+    <!-- Mixitup -- filter  -->
     <script src="assets/js/jquery.mixitup.min.js"></script>
 
-    <!-- fancy box  -->
+    <!-- Fancy box  -->
     <script src="assets/js/jquery.fancybox.min.js"></script>
 
-    <!-- parallax  -->
+    <!-- Parallax  -->
     <script src="assets/js/parallax.min.js"></script>
 
-    <!-- gsap  -->
+    <!-- Gsap (animaciones) -->
     <script src="assets/js/gsap.min.js"></script>
 
-    <!-- scroll trigger  -->
+    <!-- Scroll trigger  -->
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- scroll to plugin  -->
+    <!-- Scroll to plugin  -->
     <script src="assets/js/ScrollToPlugin.min.js"></script>
     <!-- rellax  -->
     <!-- <script src="assets/js/rellax.min.js"></script> -->
     <!-- <script src="assets/js/rellax-custom.js"></script> -->
     <!-- smooth scroll  -->
     <script src="assets/js/smooth-scroll.js"></script>
-    <!-- custom js  -->
+    <!-- Custom js  -->
     <script src="main.js"></script>
 
 </body>
-
 </html>
